@@ -17,7 +17,13 @@ export const getMovieDetails = async (id) => {
   }
 };
 
-export const getTitles = async ({ type, genre, minRating, limit = 50, pageToken } = {}) => {
+export const getTitles = async ({
+  type,
+  genre,
+  minRating,
+  limit = 50,
+  pageToken,
+} = {}) => {
   try {
     const params = { limit };
     if (type) params.type = type;
